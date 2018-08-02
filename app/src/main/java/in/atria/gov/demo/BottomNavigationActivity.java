@@ -28,7 +28,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
 
-
         ActionBar actionBar;
         actionBar= getSupportActionBar();
         actionBar.hide();
@@ -54,39 +53,27 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             HomeFragment frg1 = new HomeFragment ();
-
             switch (item.getItemId()) {
-
                 case R.id.navigation_dashboard:
                     openFragment(frg1);
                     break;
-
                 case R.id.navigation_contact:
-                    startActivity(new Intent(getApplicationContext(),ContactActivity.class));
+                    startActivity(new Intent(getApplicationContext(),NotificationsActivity.class));
                     break;
-
                 case R.id.navigation_report:
                     startActivity(new Intent(getApplicationContext(),ReportActivity.class));
                     break;
-
                 case R.id.navigation_profile:
                     ProfileFragment frg12 = new ProfileFragment ();
                     openFragment(frg12);
                     break;
-
-
                 default:
                     openFragment(frg1);
                     break;
-
-
-
             }
-
             return true;
         }
     };
