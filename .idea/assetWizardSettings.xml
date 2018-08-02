@@ -34,8 +34,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/user (1).png" />
-                                      <entry key="outputName" value="ic_profile" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/settings.png" />
+                                      <entry key="outputName" value="ic_settings" />
                                     </map>
                                   </option>
                                 </PersistentState>
