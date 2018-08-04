@@ -12,14 +12,14 @@ import in.atria.gov.demo.R;
  * Created by suryamurugan on 4/4/18.
  */
 
-public class ProfileFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.profile_fragment,null);
+        return inflater.inflate(R.layout.settings_fragment,null);
     }
 
     @Override

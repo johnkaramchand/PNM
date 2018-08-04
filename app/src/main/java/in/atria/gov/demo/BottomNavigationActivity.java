@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import in.atria.gov.demo.Fragments.HomeFragment;
-import in.atria.gov.demo.Fragments.ProfileFragment;
+import in.atria.gov.demo.Fragments.SettingsFragment;
 
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -67,7 +67,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(),ReportActivity.class));
                     break;
                 case R.id.navigation_profile:
-                    ProfileFragment frg12 = new ProfileFragment ();
+                    SettingsFragment frg12 = new SettingsFragment();
                     openFragment(frg12);
                     break;
                 default:
