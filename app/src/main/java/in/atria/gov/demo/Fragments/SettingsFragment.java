@@ -27,6 +27,10 @@ public class SettingsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+
+
+        
+
     }
 
 
