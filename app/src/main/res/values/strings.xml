@@ -4,4 +4,14 @@
     <string name="title_report">Report</string>
     <string name="title_profile">Settings</string>
     <string name="title_contact">Notifications</string>
+    
+    <string name="taluk_bageepalli">Bageepalli</string>
+    <string name="taluk_gudibanda">Gudibanda</string>
+    <string name="taluk_gauribinuru">Gauribinuru</string>
+    <string name="taluk_chikkaballapur">Chikkaballapur</string>
+    <string name="taluk_shillaghatta">Shillaghatta</string>
+    <string name="taluk_chintamani">Chintamani</string>
+
+
+    <string name="google_maps_key"></string>
 </resources>
