@@ -3,30 +3,32 @@ package in.atria.gov.demo;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
+import in.atria.gov.demo.R;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class ReportActivity extends AppCompatActivity {
+public class GrivenceActivity extends AppCompatActivity {
+
+    private int REQUEST_CODE=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report);
+        setContentView(R.layout.activity_grivence);
 
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar =getSupportActionBar();
         actionBar.hide();
-
-        CardView cardView = findViewById(R.id.chik);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        Button button = findViewById(R.id.o);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ReportActivity.this,PanchayatActivity.class));
+
             }
         });
+
 
 
 
@@ -58,5 +60,10 @@ public class ReportActivity extends AppCompatActivity {
 
     protected void onStartNewActivity() {
         overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

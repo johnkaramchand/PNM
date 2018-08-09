@@ -123,4 +123,30 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <string name="title1">ADDAGAL</string>
+    <string name="title2">AGALAGURKI</string>
+    <string name="title3">AJJIWARA</string>
+    <string name="title4">ANGAREKANAHALLI</string>
+    <string name="title5">ARUURU</string>
+    <string name="title6">AVAGURKI</string>
+    <string name="title7">DIBBURU</string>
+    <string name="title8">DODDAMARALI</string>
+    <string name="title9">DODDAPAILAGURKI</string>
+    <string name="title10">GOLLAHALLI</string>
+    <string name="title11">HAROBANDE</string>
+    <string name="title12">HOSAHUDYA</string>
+    <string name="title13">KAMMAGUTTAHALI</string>
+    <string name="title14">KONDENAHALLI</string>
+    <string name="title15">KUPPAHALLI</string>
+    <string name="title16">MANCHNABELE</string>
+    <string name="title17">MANDIKAL</string>
+    <string name="title18">MUDDENAHALLI</string>
+    <string name="title19">NANDI</string>
+    <string name="title20">PATRENAHALLI</string>
+    <string name="title21">PERASANDRA</string>
+    <string name="title22">POSHOTTAHALLI</string>
+    <string name="title23">THIPPANAHALLI</string>
+
+
 </resources>

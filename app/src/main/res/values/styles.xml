@@ -14,4 +14,14 @@
     <style name="SplashTheme2" parent="Theme.AppCompat.NoActionBar">
 
     </style>
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+    <item name="fontFamily">@font/droid_sans</item>
+    </style>
+
+    <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">4dp</item>
+
+        <!--<item name="cardBackgroundColor">@color/dot_dark_screen1</item>-->
+    </style>
 </resources>

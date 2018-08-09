@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".GrivenceActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cabin_bold"
+        android:padding="5dp"
+        android:text="Grievance Reporting"
+        android:textAlignment="center"
+        android:textColor="#241a6c"
+        android:textSize="30dp" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"/>
+
+    <LinearLayout
+
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/cabin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Taluk"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="22dp"
+                android:fontFamily="@font/cabin_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taluk_chikkaballapur"
+                android:textColor="#241a6c"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/cabin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Panchayat"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="22dp"
+                android:fontFamily="@font/cabin_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title1"
+                android:textColor="#241a6c"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"/>
+
+    <Button
+        android:id="@+id/o"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

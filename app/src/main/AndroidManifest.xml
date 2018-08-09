@@ -12,6 +12,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".Intro.SplashActivity"
@@ -25,10 +28,13 @@
         <activity
             android:name=".Intro.WelcomeAct"
             android:theme="@style/SplashTheme2" />
-        <activity android:name=".BottomNavigationActivity"/>
+        <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".NotificationsActivity" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".PanchayatActivity"></activity>
+        <activity android:name=".PanchayatActivity" />
+        <activity android:name=".idk" />
+        <activity android:name=".GrivenceActivity" />
+        <activity android:name=".IssuesActivity"></activity>
     </application>
 
 </manifest>

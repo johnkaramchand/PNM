@@ -87,8 +87,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/YOLO/sid.png" />
-                                      <entry key="outputName" value="ic_sid" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/select.png" />
+                                      <entry key="outputName" value="ic_handsel" />
                                     </map>
                                   </option>
                                 </PersistentState>
