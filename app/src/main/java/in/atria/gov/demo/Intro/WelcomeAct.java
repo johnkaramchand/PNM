@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import in.atria.gov.demo.BottomNavigationActivity;
+import in.atria.gov.demo.PhoneAuthActivity;
 import in.atria.gov.demo.R;
 
 public class WelcomeAct extends AppCompatActivity {
@@ -122,27 +123,19 @@ public class WelcomeAct extends AppCompatActivity {
 
 
 /*
-
         UserLocalStore userLocalStore = new UserLocalStore(getApplicationContext());
-
-
-
         if (userLocalStore.getLoggedInUser() ==null){
-
             //Toast.makeText(this, "empty", Toast.LENGTH_SHORT).show();
             Intent intent2 = new Intent(WelcomeAct.this,LoginActivity.class);
-
             WelcomeAct.this.startActivity(intent2);
             finish();
-
         }
         else if (!(userLocalStore.getLoggedInUser() ==null)) {
-
                 Intent intent = new Intent(WelcomeAct.this, BottomNavigationActivity.class);
             WelcomeAct.this.startActivity(intent);
             finish();
         }*/
-        Intent  i = new Intent(WelcomeAct.this,BottomNavigationActivity.class);
+        Intent  i = new Intent(WelcomeAct.this, PhoneAuthActivity.class);
 
         startActivity(i);
 

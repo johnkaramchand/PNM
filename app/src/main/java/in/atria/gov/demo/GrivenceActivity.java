@@ -1,5 +1,6 @@
 package in.atria.gov.demo;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -20,11 +21,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class GrivenceActivity extends AppCompatActivity {
 
@@ -112,9 +126,48 @@ public class GrivenceActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+                Map<String, Object> report = new HashMap<>();
+                report.put("lat", "10");
+                report.put("lon", "11");
+                report.put("taluk", "chikballapur");
+                report.put("village", "village name");
+                report.put("problem", "description");
+                report.put("status", "Submitted");
+                report.put("Reported to", "Mr xyz");
+                report.put("number", "99016538822");
+                report.put("user id", "1234");
+                report.put("user name", "Mr abc");
+                report.put("user number", "99072727277");
+
+// Add a new document with a generated ID
+
+                db.collection("users")
+                        .add(report)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Toast.makeText(getApplicationContext(), "Success!",
+                                        Toast.LENGTH_LONG).show();
+
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(getApplicationContext(), "Error!",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+
+
 
             }
         });
+
+
 
         Button image = findViewById(R.id.button);
 
@@ -149,11 +202,46 @@ public class GrivenceActivity extends AppCompatActivity {
             if (data != null) {
                 Uri contentURI = data.getData();
                 try {
+
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
                     String path = saveImage(bitmap);
                     Toast.makeText(GrivenceActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+
+                    //Firebase
+                    FirebaseStorage storage;
+                    StorageReference storageReference;
+
+                    storage = FirebaseStorage.getInstance();
+                    storageReference = storage.getReference();
+
+                    StorageReference ref = storageReference.child("/Users/apple/StudioProjects/PNM/app/src/main/res/drawable/mountains.jpeg");
+
+                    ref.putFile(contentURI)
+                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                    Toast.makeText(getApplicationContext(), "Uploaded", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getApplicationContext(), "Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                                    double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
+                                            .getTotalByteCount());
+                                }
+                            });
+
                     /*voterb.setImageBitmap(bitmap);
                     voterb.setScaleType(ImageView.ScaleType.CENTER);
+
+
 */
 
                 } catch (IOException e) {
