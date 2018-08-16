@@ -48,7 +48,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_phone);
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+    //    coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
 
         //initializing objects
         mAuth = FirebaseAuth.getInstance();
