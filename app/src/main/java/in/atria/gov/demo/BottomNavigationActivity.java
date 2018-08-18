@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import in.atria.gov.demo.Fragments.HomeFragment;
+import in.atria.gov.demo.Fragments.ReportFragment;
 import in.atria.gov.demo.Fragments.SettingsFragment;
 
 import android.view.MenuItem;
@@ -37,8 +38,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment()).commit();
         navigation.getMenu().getItem(0).setChecked(true);
-
-
     }
 
     private void openFragment(final Fragment fragment)   {
@@ -63,7 +62,9 @@ public class BottomNavigationActivity extends AppCompatActivity {
                     break;
                 case R.id.navigation_report:
                     //startActivity(new Intent(getApplicationContext(),ReportActivity.class));
-                    startActivity(new Intent(getApplicationContext(),GrivenceActivity.class));
+                    /*startActivity(new Intent(getApplicationContext(),GrivenceActivity.class));*/
+                    ReportFragment reportFragment = new ReportFragment();
+                    openFragment(reportFragment);
                     break;
                 case R.id.navigation_profile:
                     SettingsFragment frg12 = new SettingsFragment();
