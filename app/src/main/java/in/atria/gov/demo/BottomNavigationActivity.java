@@ -28,10 +28,10 @@ public class BottomNavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
-/*
+
         ActionBar actionBar;
         actionBar= getSupportActionBar();
-        actionBar.hide();*/
+        actionBar.hide();
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

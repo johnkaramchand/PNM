@@ -25,7 +25,15 @@ public class PanchayatActivity extends AppCompatActivity {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PanchayatActivity.this,IssuesActivity.class));
+
+                Intent intentMessage=new Intent();
+                String message = "Adagal";
+                intentMessage.putExtra("selectedpanchayat",message);
+                // Set The Result in Intent
+                setResult(2,intentMessage);
+// finish The activity
+                finish();
+
             }
         });
     }

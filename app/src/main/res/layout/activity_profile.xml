@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
+
+
 
 
     <LinearLayout
@@ -13,128 +17,251 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
+
             android:layout_width="match_parent"
-            android:layout_height="400dp">
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:background="@drawable/gradientbackground"
+                android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="200dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_marginTop="35dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:src="@drawable/ic_person_black_24dp" />
                 <TextView
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Name is Name"
+                    android:text="Hi, UserName"
                     android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="21sp"/>
             </LinearLayout>
             <androidx.cardview.widget.CardView
+                android:id="@+id/somedcard"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
                 android:layout_width="400dp"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="275dp"
+                android:layout_marginTop="145dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginHorizontal="20dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+91 9742721625"
+                        android:gravity="center"/>
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="language"
-                            android:textSize="20sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="English"
-                            android:textStyle="bold"
-                            android:textSize="20sp"
-                            android:paddingTop="10dp"
-                            android:textColor="@color/startblue"/>
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Langauge"
+                                android:textSize="15sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="English"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/colorPrimary"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No. of Reports"
+                                android:textSize="15sp"/>
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/colorPrimary"/>
+                        </LinearLayout>
+
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="something"
-                            android:textSize="20sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="data"
-                            android:textStyle="bold"
-                            android:textSize="20sp"
-                            android:paddingTop="10dp"
-                            android:textColor="@color/startblue"/>
-                    </LinearLayout>
+
+                    <Button
+
+                        android:layout_gravity="center"
+                        android:id="@+id/buttonLogout"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Logout"
+                        android:textAllCaps="false"
+                        android:textColor="#000000" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
+
+
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="5dp"
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_about"/>
+
+
+                        <TextView
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="About"
+                            android:textSize="25dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idont"/>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_faq"/>
+
+
+                        <TextView
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="FAQ"
+                            android:textSize="25dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idont"/>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Frequently Asked Questions: "
                 android:layout_margin="15dp"
-                android:textSize="25dp"/>
+                android:text="Us"
+                android:textSize="25dp" />
+
+
+
+
+
 
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>pp
 
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Welcome to Your Profile"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="#000000" />
 
 
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorPrimary"
-        android:text="Logout"
-        android:textAllCaps="false"
-        android:textColor="#000000" />
 
-</RelativeLayout>
+
+
+</ScrollView>
