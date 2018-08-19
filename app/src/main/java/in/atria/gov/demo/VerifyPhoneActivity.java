@@ -59,7 +59,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         //and sending the verification code to the number
         Intent intent = getIntent();
         String mobile = intent.getStringExtra("mobile");
-        sendVerificationCode("+919886064585");
+        sendVerificationCode("+919742721625");
 
         //if the automatic sms detection did not work, user can also enter the code manually
         //so adding a click listener to the button

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import in.atria.gov.demo.Fragments.HomeFragment;
+import in.atria.gov.demo.Fragments.NotificationFragment;
 import in.atria.gov.demo.Fragments.ReportFragment;
 import in.atria.gov.demo.Fragments.SettingsFragment;
 
@@ -27,10 +28,10 @@ public class BottomNavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
-
+/*
         ActionBar actionBar;
         actionBar= getSupportActionBar();
-        actionBar.hide();
+        actionBar.hide();*/
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -58,7 +59,9 @@ public class BottomNavigationActivity extends AppCompatActivity {
                     openFragment(frg1);
                     break;
                 case R.id.navigation_contact:
-                    startActivity(new Intent(getApplicationContext(),NotificationsActivity.class));
+                    //startActivity(new Intent(getApplicationContext(),NotificationsActivity.class));
+                    NotificationFragment notificationFragment = new NotificationFragment();
+                    openFragment(notificationFragment);
                     break;
                 case R.id.navigation_report:
                     //startActivity(new Intent(getApplicationContext(),ReportActivity.class));

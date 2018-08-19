@@ -135,8 +135,8 @@ public class WelcomeAct extends AppCompatActivity {
             WelcomeAct.this.startActivity(intent);
             finish();
         }*/
-        //Intent  i = new Intent(WelcomeAct.this, PhoneAuthActivity.class);
-        Intent  i = new Intent(WelcomeAct.this, BottomNavigationActivity.class);
+        Intent  i = new Intent(WelcomeAct.this, PhoneAuthActivity.class);
+        //Intent  i = new Intent(WelcomeAct.this, BottomNavigationActivity.class);
         startActivity(i);
 
 

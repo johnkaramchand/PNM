@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--<color name="colorPrimary">#008577</color>-->
-    <color name="colorPrimary">#ffffff</color>
+   <!-- <color name="colorPrimary">#ffffff</color>-->
 
-    <color name="colorPrimaryDark">#cacaca</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#1da1f2</color>
+
+  <!--  <color name="colorPrimaryDark">#cacaca</color>-->
+     <color name="colorPrimaryDark">#0073bf</color>
+    <color name="colorAccent">#6cd2ff</color>
     ..    <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
     <color name="white">#ffffff</color>
@@ -47,4 +50,15 @@
 
     <color name="deep_orange">#E64A19</color>
     <color name="brown">#5D4037</color>
+
+    <color name="colorSecondary">#00897b</color>
+    <color name="colorSecondaryLight">#4ebaaa</color>
+    <color name="colorSecondaryDark">#005b4f</color>
+    <color name="colorPrimaryText">#000000</color>
+    <color name="colorSecondaryText">#000000</color>
+    <color name="accepted">#76ff03</color>
+    <color name="rejected">#ff3d00</color>
+    <color name="greylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
 </resources>

@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="#ffffff"
+    android:scrollbars="none    "
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
@@ -85,6 +86,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Updates"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Some stats here"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
                     android:textAlignment="center"
                     android:textSize="20dp"
                     android:layout_margin="10dp"/>
