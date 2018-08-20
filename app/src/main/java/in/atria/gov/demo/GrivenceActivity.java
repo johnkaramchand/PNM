@@ -192,7 +192,7 @@ public class GrivenceActivity extends AppCompatActivity {
                 report.put("user name", "Mr abc");
                 report.put("user number", "99072727277");
                 // Add a new document with a generated ID
-                db.collection("users")
+                db.collection("users").document("9901624795").collection("reports")
                         .add(report)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
@@ -241,6 +241,7 @@ public class GrivenceActivity extends AppCompatActivity {
 
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
+
                 Place selectedPlace = PlacePicker.getPlace(data, this);
                 // Do something with the place
                 Toast.makeText(this, ""+selectedPlace.getAddress(), Toast.LENGTH_SHORT).show();
