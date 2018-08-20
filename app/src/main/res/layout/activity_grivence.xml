@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:scrollbars="none"
     tools:context=".GrivenceActivity"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +20,7 @@
         android:padding="5dp"
         android:text="Grievance Reporting"
         android:textAlignment="center"
-        android:textColor="#241a6c"
+        android:textColor="@color/colorPrimary"
         android:textSize="30dp" />
     <TextView
         android:layout_marginTop="5dp"
@@ -39,6 +43,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="18dp"
                 android:fontFamily="@font/cabin_medium"
@@ -53,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/taluk_chikkaballapur"
-                android:textColor="#241a6c"/>
+                android:textColor="@color/colorPrimary"/>
         </LinearLayout>
 
 
@@ -66,6 +71,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="18dp"
                 android:fontFamily="@font/cabin_medium"
@@ -80,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title1"
-                android:textColor="#241a6c"/>
+                android:textColor="@color/colorPrimary"/>
         </LinearLayout>
 
 
@@ -133,27 +139,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_notifications_black_24dp"/>
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_placeholder"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:gravity="center"
-                android:layout_weight="1"
-                android:id="@+id/locationdata"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="343143143434"/>
-
             <EditText
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:hint="Enter Address (Optional)"/>
         </LinearLayout>
 
@@ -165,17 +164,10 @@
         android:hint="Description:"
         android:fontFamily="@font/cabin_regular"/>
 
-
-    <Button
-        android:id="@+id/o"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:src="@color/black"/>
 
     <Button
         android:id="@+id/button"
@@ -187,6 +179,16 @@
         android:orientation="vertical">
 
 
+    <Button
+        android:id="@+id/o"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
 
 
 
@@ -194,3 +196,6 @@
     </LinearLayout>
 
 </LinearLayout>
+
+
+</ScrollView>

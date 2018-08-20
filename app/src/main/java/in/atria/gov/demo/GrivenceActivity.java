@@ -123,7 +123,7 @@ public class GrivenceActivity extends AppCompatActivity {
         ActionBar actionBar =getSupportActionBar();
         actionBar.hide();
 
-        locationdata = findViewById(R.id.locationdata);
+       // locationdata = findViewById(R.id.locationdata);
 
         Button button = findViewById(R.id.o);
 
@@ -246,7 +246,7 @@ public class GrivenceActivity extends AppCompatActivity {
                 // Do something with the place
                 Toast.makeText(this, ""+selectedPlace.getAddress(), Toast.LENGTH_SHORT).show();
               //  address.setText(selectedPlace.getAddress());
-                locationdata.setText(selectedPlace.getAddress());
+               // locationdata.setText(selectedPlace.getAddress());
 
 
 
