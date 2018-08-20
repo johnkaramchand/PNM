@@ -54,6 +54,7 @@ public class GrivenceActivity extends AppCompatActivity {
     private int REQUEST_CODE=1;
     private int GALLERY = 1, CAMERA = 2;
     private static final String IMAGE_DIRECTORY = "/mws";
+    ImageView imageView;
 
     private void showPictureDialog(final int from){
         AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
@@ -210,11 +211,13 @@ public class GrivenceActivity extends AppCompatActivity {
                         });
                 }
         });
+
+         imageView= findViewById(R.id.imageselected);
           Button image = findViewById(R.id.button);
           image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPictureDialog(REQUEST_CODE);
+                showPictureDialog(GALLERY+REQUEST_CODE);
             }
         });
 
@@ -258,7 +261,9 @@ public class GrivenceActivity extends AppCompatActivity {
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
                     String path = saveImage(bitmap);
-                    Toast.makeText(GrivenceActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GrivenceActivity.this, ""+path, Toast.LENGTH_SHORT).show();
+
+                    imageView.setImageBitmap(bitmap);
 
                     //Firebase
                     FirebaseStorage storage;

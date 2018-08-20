@@ -53,7 +53,7 @@ public class ReportFragment extends Fragment {
         data = new ArrayList<ReportModel>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("users").document("9901624795").collection("reports")
+        db.collection("users").document("9742721625").collection("reports")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
